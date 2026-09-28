@@ -1,0 +1,5 @@
+.vscode/**
+scripts/**
+theme.config.json
+*.vsix
+.gitignore

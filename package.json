@@ -1,0 +1,57 @@
+{
+  "name": "unnamed-amoled-theme",
+  "displayName": "Unnamed AMOLED Theme",
+  "description": "Pure black AMOLED themes with neon red accents for VS Code and Cursor",
+  "version": "1.0.0",
+  "publisher": "troja",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "amoled",
+    "black",
+    "oled",
+    "dark",
+    "red",
+    "neon",
+    "theme"
+  ],
+  "galleryBanner": {
+    "color": "#000000",
+    "theme": "dark"
+  },
+  "scripts": {
+    "build": "node scripts/build-themes.mjs",
+    "package": "npm run build && npx --yes @vscode/vsce package --allow-missing-repository",
+    "install-cursor": "npm run package && cursor --install-extension unnamed-amoled-theme-1.0.0.vsix --force",
+    "install-code": "npm run package && code --install-extension unnamed-amoled-theme-1.0.0.vsix --force"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "Unnamed AMOLED Neon Red",
+        "uiTheme": "vs-dark",
+        "path": "./themes/neon-red-color-theme.json"
+      },
+      {
+        "label": "Unnamed AMOLED Laser",
+        "uiTheme": "vs-dark",
+        "path": "./themes/laser-color-theme.json"
+      },
+      {
+        "label": "Unnamed AMOLED Crimson",
+        "uiTheme": "vs-dark",
+        "path": "./themes/crimson-color-theme.json"
+      },
+      {
+        "label": "Unnamed AMOLED Blood",
+        "uiTheme": "vs-dark",
+        "path": "./themes/blood-color-theme.json"
+      }
+    ]
+  }
+}

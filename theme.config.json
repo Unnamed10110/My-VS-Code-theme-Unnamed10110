@@ -1,0 +1,104 @@
+{
+  "options": {
+    "tabStyle": "both",
+    "selection": "medium",
+    "neonBorders": true,
+    "statusBar": "black",
+    "lineHighlight": true,
+    "italicComments": true,
+    "boldKeywords": false
+  },
+  "base": {
+    "bg": "#000000",
+    "surface": "#000000",
+    "elevated": "#0b0b0b",
+    "border": "#1f1f1f",
+    "fg": "#e8e8e8",
+    "muted": "#7a7a7a",
+    "accentText": "#000000",
+    "added": "#3ddc84",
+    "modified": "#ffb020"
+  },
+  "themes": [
+    {
+      "id": "neon-red",
+      "label": "Unnamed AMOLED Neon Red",
+      "palette": {
+        "accent": "#ff1a3c",
+        "keyword": "#ff1a3c",
+        "operator": "#ff5c7a",
+        "string": "#a8e87c",
+        "func": "#ffc857",
+        "type": "#c792ff",
+        "number": "#ff9e5e",
+        "constant": "#ff6ac1",
+        "variable": "#e0e0e0",
+        "parameter": "#ffb3a7",
+        "property": "#6fd8ff",
+        "comment": "#555555",
+        "error": "#ff3355"
+      }
+    },
+    {
+      "id": "laser",
+      "label": "Unnamed AMOLED Laser",
+      "palette": {
+        "fg": "#f2f2f2",
+        "accent": "#ff0033",
+        "keyword": "#ff0033",
+        "operator": "#ff4d6d",
+        "string": "#7dff7a",
+        "func": "#ffe45e",
+        "type": "#b980ff",
+        "number": "#ff9a3c",
+        "constant": "#ff4fd8",
+        "variable": "#f2f2f2",
+        "parameter": "#ffa38f",
+        "property": "#3fe0ff",
+        "comment": "#5e5e5e",
+        "error": "#ff2244"
+      }
+    },
+    {
+      "id": "crimson",
+      "label": "Unnamed AMOLED Crimson",
+      "palette": {
+        "accent": "#e0103a",
+        "keyword": "#e0103a",
+        "operator": "#f25c78",
+        "string": "#b5d98a",
+        "func": "#f7c873",
+        "type": "#d19bff",
+        "number": "#ff8a65",
+        "constant": "#f27ebd",
+        "variable": "#d6d6d6",
+        "parameter": "#f5b0a0",
+        "property": "#7fc8e8",
+        "comment": "#565656",
+        "error": "#ff3355"
+      }
+    },
+    {
+      "id": "blood",
+      "label": "Unnamed AMOLED Blood",
+      "palette": {
+        "fg": "#cfcfcf",
+        "muted": "#6a6a6a",
+        "border": "#1a1a1a",
+        "accent": "#c8102e",
+        "keyword": "#d7263d",
+        "operator": "#c8102e",
+        "string": "#9ab87a",
+        "func": "#d9b36c",
+        "type": "#a98bd6",
+        "number": "#d98a5f",
+        "constant": "#c77aa6",
+        "variable": "#bdbdbd",
+        "parameter": "#c9a097",
+        "property": "#7aa9bf",
+        "comment": "#444444",
+        "error": "#e8283f"
+      }
+    }
+  ]
+}
