@@ -1,7 +1,7 @@
 {
   "name": "unnamed-amoled-theme",
   "displayName": "Unnamed AMOLED Theme",
-  "description": "Pure black AMOLED themes with neon red accents for VS Code and Cursor",
+  "description": "Pure black AMOLED themes with neon red, green, blue, cyan, purple, pink, orange, gold and white accents for VS Code and Cursor",
   "version": "1.0.0",
   "publisher": "troja",
   "license": "MIT",
@@ -51,6 +51,46 @@
         "label": "Unnamed AMOLED Blood",
         "uiTheme": "vs-dark",
         "path": "./themes/blood-color-theme.json"
+      },
+      {
+        "label": "Unnamed AMOLED Green",
+        "uiTheme": "vs-dark",
+        "path": "./themes/green-color-theme.json"
+      },
+      {
+        "label": "Unnamed AMOLED Blue",
+        "uiTheme": "vs-dark",
+        "path": "./themes/blue-color-theme.json"
+      },
+      {
+        "label": "Unnamed AMOLED Cyan",
+        "uiTheme": "vs-dark",
+        "path": "./themes/cyan-color-theme.json"
+      },
+      {
+        "label": "Unnamed AMOLED Purple",
+        "uiTheme": "vs-dark",
+        "path": "./themes/purple-color-theme.json"
+      },
+      {
+        "label": "Unnamed AMOLED Pink",
+        "uiTheme": "vs-dark",
+        "path": "./themes/pink-color-theme.json"
+      },
+      {
+        "label": "Unnamed AMOLED Orange",
+        "uiTheme": "vs-dark",
+        "path": "./themes/orange-color-theme.json"
+      },
+      {
+        "label": "Unnamed AMOLED Gold",
+        "uiTheme": "vs-dark",
+        "path": "./themes/gold-color-theme.json"
+      },
+      {
+        "label": "Unnamed AMOLED White",
+        "uiTheme": "vs-dark",
+        "path": "./themes/white-color-theme.json"
       }
     ]
   }

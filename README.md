@@ -1,13 +1,21 @@
 # Unnamed AMOLED Theme
 
-Pure black (`#000000`) themes for VS Code and Cursor with neon red accents. Every surface — editor, sidebar, panels, title bar — is true black, so pixels stay off on OLED screens.
+Pure black (`#000000`) themes for VS Code and Cursor with neon accents. Every surface — editor, sidebar, panels, title bar — is true black, so pixels stay off on OLED screens. Each variant uses its accent for keywords and UI highlights, and a varied palette for the rest of the syntax.
 
 | Theme | Accent | Notes |
 |-------|--------|-------|
 | Unnamed AMOLED Neon Red | `#ff1a3c` | Default |
-| Unnamed AMOLED Laser | `#ff0033` | Brightest, highest contrast |
-| Unnamed AMOLED Crimson | `#e0103a` | Slightly warmer |
+| Unnamed AMOLED Laser | `#ff0033` | Brightest red, highest contrast |
+| Unnamed AMOLED Crimson | `#e0103a` | Slightly warmer red |
 | Unnamed AMOLED Blood | `#c8102e` | Dimmer text and accents, low glare |
+| Unnamed AMOLED Green | `#00ff88` | Neon green |
+| Unnamed AMOLED Blue | `#3d9bff` | Electric blue |
+| Unnamed AMOLED Cyan | `#00e5ff` | Ice cyan |
+| Unnamed AMOLED Purple | `#c04dff` | Neon violet |
+| Unnamed AMOLED Pink | `#ff2e97` | Hot pink |
+| Unnamed AMOLED Orange | `#ff8c1a` | Amber orange |
+| Unnamed AMOLED Gold | `#ffd60a` | Bright yellow |
+| Unnamed AMOLED White | `#ffffff` | Monochrome UI, pastel syntax, bold keywords |
 
 ## Install
 

@@ -99,6 +99,161 @@
         "comment": "#444444",
         "error": "#e8283f"
       }
+    },
+    {
+      "id": "green",
+      "label": "Unnamed AMOLED Green",
+      "palette": {
+        "accent": "#00ff88",
+        "keyword": "#00ff88",
+        "operator": "#5cffb0",
+        "string": "#e6ff6b",
+        "func": "#4de8ff",
+        "type": "#b18cff",
+        "number": "#ffb454",
+        "constant": "#ff6ac1",
+        "variable": "#e0e0e0",
+        "parameter": "#b8ffd9",
+        "property": "#7ab8ff",
+        "comment": "#4f5a54",
+        "error": "#ff3355"
+      }
+    },
+    {
+      "id": "blue",
+      "label": "Unnamed AMOLED Blue",
+      "palette": {
+        "accent": "#3d9bff",
+        "keyword": "#3d9bff",
+        "operator": "#7ab8ff",
+        "string": "#a8e87c",
+        "func": "#ffc857",
+        "type": "#4de8e0",
+        "number": "#ff9e5e",
+        "constant": "#ff6ac1",
+        "variable": "#e0e0e0",
+        "parameter": "#b3d4ff",
+        "property": "#c792ff",
+        "comment": "#4f5561",
+        "error": "#ff3355"
+      }
+    },
+    {
+      "id": "cyan",
+      "label": "Unnamed AMOLED Cyan",
+      "palette": {
+        "accent": "#00e5ff",
+        "keyword": "#00e5ff",
+        "operator": "#66f0ff",
+        "string": "#b8f56b",
+        "func": "#ffd166",
+        "type": "#ff79c6",
+        "number": "#ff9e5e",
+        "constant": "#c792ff",
+        "variable": "#e0e0e0",
+        "parameter": "#a6f4ff",
+        "property": "#7a9cff",
+        "comment": "#4d5a5c",
+        "error": "#ff3355"
+      }
+    },
+    {
+      "id": "purple",
+      "label": "Unnamed AMOLED Purple",
+      "palette": {
+        "accent": "#c04dff",
+        "keyword": "#c04dff",
+        "operator": "#d68aff",
+        "string": "#7cffc4",
+        "func": "#ffd166",
+        "type": "#ff79c6",
+        "number": "#ff9e5e",
+        "constant": "#6fd8ff",
+        "variable": "#e0e0e0",
+        "parameter": "#e3b8ff",
+        "property": "#8ab4ff",
+        "comment": "#55505c",
+        "error": "#ff3355"
+      }
+    },
+    {
+      "id": "pink",
+      "label": "Unnamed AMOLED Pink",
+      "palette": {
+        "accent": "#ff2e97",
+        "keyword": "#ff2e97",
+        "operator": "#ff75b8",
+        "string": "#a8e87c",
+        "func": "#ffd166",
+        "type": "#b18cff",
+        "number": "#ff9e5e",
+        "constant": "#4de8ff",
+        "variable": "#e0e0e0",
+        "parameter": "#ffb3d6",
+        "property": "#7ab8ff",
+        "comment": "#5a5057",
+        "error": "#ff3355"
+      }
+    },
+    {
+      "id": "orange",
+      "label": "Unnamed AMOLED Orange",
+      "palette": {
+        "accent": "#ff8c1a",
+        "keyword": "#ff8c1a",
+        "operator": "#ffb366",
+        "string": "#a8e87c",
+        "func": "#ffe066",
+        "type": "#6fd8ff",
+        "number": "#ff5c7a",
+        "constant": "#c792ff",
+        "variable": "#e0e0e0",
+        "parameter": "#ffc999",
+        "property": "#7ab8ff",
+        "comment": "#5a5550",
+        "error": "#ff3355"
+      }
+    },
+    {
+      "id": "gold",
+      "label": "Unnamed AMOLED Gold",
+      "palette": {
+        "accent": "#ffd60a",
+        "keyword": "#ffd60a",
+        "operator": "#ffe45e",
+        "string": "#a8e87c",
+        "func": "#6fd8ff",
+        "type": "#ff8c5a",
+        "number": "#ff6ac1",
+        "constant": "#c792ff",
+        "variable": "#e0e0e0",
+        "parameter": "#fff0a3",
+        "property": "#7ab8ff",
+        "comment": "#5a5848",
+        "error": "#ff3355"
+      }
+    },
+    {
+      "id": "white",
+      "label": "Unnamed AMOLED White",
+      "options": {
+        "boldKeywords": true
+      },
+      "palette": {
+        "accent": "#ffffff",
+        "keyword": "#ffffff",
+        "operator": "#bdbdbd",
+        "string": "#b9f2c7",
+        "func": "#ffe8a3",
+        "type": "#cdb8ff",
+        "number": "#ffc4a3",
+        "constant": "#ffb8d9",
+        "variable": "#d0d0d0",
+        "parameter": "#e8e8e8",
+        "property": "#b3e0ff",
+        "comment": "#555555",
+        "error": "#ff3355"
+      }
     }
   ]
 }
