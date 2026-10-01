@@ -19,21 +19,22 @@ Pure black (`#000000`) themes for VS Code and Cursor with neon accents. Every su
 
 ## Install
 
+Build, package and install in one step:
+
 ```sh
-npm run install-cursor   # or: npm run install-code
+npm run install-cursor   # Cursor
+npm run install-code     # VS Code
 ```
 
-Then run **Preferences: Color Theme** and pick one of the themes above.
+Then run **Developer: Reload Window**, open **Preferences: Color Theme** (`Ctrl+K` `Ctrl+T`) and pick one of the themes above.
+
+To install on another machine or editor, copy `unnamed-amoled-theme-1.0.0.vsix` and use **Extensions: Install from VSIX...**, or run `<editor> --install-extension unnamed-amoled-theme-1.0.0.vsix --force` (`code`, `code-insiders`, `codium`, `cursor`, `windsurf`).
 
 To try changes without installing, press `F5` in this folder to open an Extension Development Host with the themes loaded.
 
 ## Tweaking colors
 
-All colors come from `theme.config.json`; the files in `themes/` are generated. After editing, run:
-
-```sh
-npm run build
-```
+All colors come from `theme.config.json`; the files in `themes/` are generated. After editing, rebuild and reinstall with `npm run install-cursor` (or `npm run install-code` for VS Code), then reload the window. To only regenerate the theme files without installing, run `npm run build`.
 
 - `base` holds colors shared by every variant (background, borders, text, git colors).
 - Each entry in `themes` overrides any of those and sets its syntax colors. Add an entry to create a new variant.
@@ -44,7 +45,7 @@ npm run build
 | `tabStyle` | `both`, `underline`, `top`, `fill` |
 | `selection` | `subtle`, `medium`, `strong` |
 | `statusBar` | `black`, `neon` |
-| `neonBorders` | `true` for red panel borders, `false` for grey |
+| `neonBorders` | `true` for accent-colored panel borders, `false` for grey |
 | `lineHighlight` | Tint the current line |
 | `italicComments` | Italic comments |
 | `boldKeywords` | Bold keywords |
