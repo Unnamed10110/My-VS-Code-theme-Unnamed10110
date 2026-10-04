@@ -17,7 +17,7 @@ const PALETTE_KEYS = [
 
 const DEFAULT_OPTIONS = {
   tabStyle: "both",
-  selection: "medium",
+  selection: "high",
   neonBorders: true,
   statusBar: "black",
   lineHighlight: true,
@@ -27,7 +27,7 @@ const DEFAULT_OPTIONS = {
 
 const OPTION_VALUES = {
   tabStyle: ["underline", "top", "both", "fill"],
-  selection: ["subtle", "medium", "strong"],
+  selection: ["subtle", "medium", "strong", "high"],
   statusBar: ["black", "neon"],
 };
 
@@ -50,6 +50,35 @@ function mix(a, b, t) {
   const x = rgb(a);
   const y = rgb(b);
   return "#" + x.map((v, i) => toHex(v + (y[i] - v) * t)).join("");
+}
+
+function luminance(hex) {
+  const [r, g, b] = rgb(hex).map((v) => {
+    const c = v / 255;
+    return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
+  });
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+}
+
+function contrast(a, b) {
+  const [hi, lo] = [luminance(a), luminance(b)].sort((x, y) => y - x);
+  return (hi + 0.05) / (lo + 0.05);
+}
+
+// Solid, partly desaturated accent shade. Picks the darkness that best balances
+// three targets: syntax colors on it >= 3:1, the selection itself >= 2:1 against
+// the background, and foreground on it >= 5:1.
+function solidSelection(p) {
+  const syntax = [p.keyword, p.string, p.func, p.type, p.number, p.constant, p.variable, p.parameter, p.property, p.operator];
+  const tint = mix(p.accent, "#808080", 0.35);
+  let best = { sel: tint, score: -1 };
+  for (let t = 0.2; t <= 0.9; t += 0.01) {
+    const sel = mix(tint, "#000000", t);
+    const minSyntax = Math.min(...syntax.map((c) => contrast(c, sel)));
+    const score = Math.min(minSyntax / 3, contrast(sel, p.bg) / 2, contrast(p.fg, sel) / 5);
+    if (score > best.score) best = { sel, score };
+  }
+  return best.sel;
 }
 
 function slugify(name) {
@@ -82,7 +111,10 @@ function resolveOptions(theme) {
 }
 
 function buildColors(p, o) {
-  const sel = { subtle: 0.2, medium: 0.32, strong: 0.2 }[o.selection];
+  const sel = { subtle: 0.2, medium: 0.32, strong: 0.2, high: 0 }[o.selection];
+  const highSel = o.selection === "high";
+  const selBg = highSel ? solidSelection(p) : alpha(p.accent, sel);
+  const selInactive = highSel ? mix(selBg, p.bg, 0.35) : alpha(p.accent, sel * 0.6);
   const line = o.neonBorders ? alpha(p.accent, 0.45) : p.border;
   const none = "#00000000";
   const tabBottom = o.tabStyle === "underline" || o.tabStyle === "both" ? p.accent : none;
@@ -97,7 +129,7 @@ function buildColors(p, o) {
     descriptionForeground: p.muted,
     errorForeground: p.error,
     "icon.foreground": p.muted,
-    "selection.background": alpha(p.accent, sel),
+    "selection.background": selBg,
     "widget.shadow": none,
     "widget.border": line,
     "sash.hoverBorder": p.accent,
@@ -178,8 +210,9 @@ function buildColors(p, o) {
     "editorLineNumber.foreground": p.muted,
     "editorLineNumber.activeForeground": p.accent,
     "editorCursor.foreground": p.accent,
-    "editor.selectionBackground": alpha(p.accent, sel),
-    "editor.inactiveSelectionBackground": alpha(p.accent, sel * 0.6),
+    "editor.selectionBackground": selBg,
+    "editor.inactiveSelectionBackground": selInactive,
+    "editor.selectionHighlightBorder": highSel ? alpha(p.accent, 0.8) : "#00000000",
     "editor.selectionHighlightBackground": alpha(p.accent, 0.32),
     "editor.wordHighlightBackground": alpha(p.accent, 0.28),
     "editor.wordHighlightStrongBackground": alpha(p.accent, 0.45),
@@ -261,7 +294,8 @@ function buildColors(p, o) {
     "terminal.background": p.surface,
     "terminal.foreground": p.fg,
     "terminalCursor.foreground": p.accent,
-    "terminal.selectionBackground": alpha(p.accent, sel),
+    "terminal.selectionBackground": selBg,
+    "terminal.inactiveSelectionBackground": selInactive,
     "terminal.ansiBlack": "#000000",
     "terminal.ansiRed": p.error,
     "terminal.ansiGreen": p.added,

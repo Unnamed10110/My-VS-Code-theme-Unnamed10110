@@ -1,7 +1,7 @@
 {
   "options": {
     "tabStyle": "both",
-    "selection": "strong",
+    "selection": "high",
     "neonBorders": true,
     "statusBar": "black",
     "lineHighlight": true,

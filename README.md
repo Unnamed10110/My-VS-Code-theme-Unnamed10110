@@ -43,7 +43,7 @@ All colors come from `theme.config.json`; the files in `themes/` are generated. 
 | Option | Values |
 |--------|--------|
 | `tabStyle` | `both`, `underline`, `top`, `fill` |
-| `selection` | `subtle`, `medium`, `strong` |
+| `selection` | `high` (solid, contrast-checked accent shade), or translucent `subtle`, `medium`, `strong` |
 | `statusBar` | `black`, `neon` |
 | `neonBorders` | `true` for accent-colored panel borders, `false` for grey |
 | `lineHighlight` | Tint the current line |
